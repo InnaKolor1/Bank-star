@@ -10,5 +10,8 @@ import lombok.NoArgsConstructor;
 public class UserFinancial {
     private long DebitProducts;
     private long InvestProducts;
+    private double sumSavingDeposits;
 
+    public int setInvestProducts() {
+    }
 }
