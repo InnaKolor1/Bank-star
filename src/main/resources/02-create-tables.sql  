@@ -1,0 +1,9 @@
+
+CREATE DATABASE bank_star.app
+    WITH
+    OWNER = bank-star.app:user
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;
+
+
+CREATE SCHEMA IF NOT EXISTS bank;
