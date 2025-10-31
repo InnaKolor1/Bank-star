@@ -1,0 +1,5 @@
+<root>
+    <item name='org.postgresql.core.ConnectionFactory org.postgresql.core.QueryExecutor openConnection(org.postgresql.util.HostSpec[], java.util.Properties)'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
