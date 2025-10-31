@@ -1,0 +1,9 @@
+
+<root>
+    <item name='com.zaxxer.hikari.util.DriverDataSource boolean isWrapperFor(java.lang.Class&lt;?&gt;)'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+    <item name='com.zaxxer.hikari.util.DriverDataSource java.sql.Connection getConnection(java.lang.String, java.lang.String)'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

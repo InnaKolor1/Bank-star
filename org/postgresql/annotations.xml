@@ -1,0 +1,5 @@
+<root>
+    <item name='org.postgresql.Driver java.util.Properties parseURL(java.lang.String, java.util.Properties)'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
