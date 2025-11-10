@@ -20,4 +20,22 @@ public class UserFinancial {
     public void setDebitProducts(Long debitProducts) { this.debitProducts = debitProducts; }
     public void setInvestProducts(Long investProducts) { this.investProducts = investProducts; }
     public void setSumSavingDeposits(Double sumSavingDeposits) { this.sumSavingDeposits = sumSavingDeposits; }
+    private long cntCreditProducts;
+    private double sumDebitDeposits;
+
+    public double getSumDebitDeposits() {
+        return sumDebitDeposits;
+    }
+
+    public void setSumDebitDeposits(int sumDebitDeposits) {
+        this.sumDebitDeposits = sumDebitDeposits;
+    }
+
+    public long getCntCreditProducts() {
+        return cntCreditProducts;
+    }
+
+    public void setCntCreditProducts(long cntCreditProducts) {
+        this.cntCreditProducts = cntCreditProducts;
+    }
 }

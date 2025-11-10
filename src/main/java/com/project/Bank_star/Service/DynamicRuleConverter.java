@@ -1,0 +1,57 @@
+package com.project.Bank_star.Service;
+
+import com.project.Bank_star.Entity.DynamicRuleEntity;
+import com.project.Bank_star.Entity.RuleQueryEntity;
+import com.project.Bank_star.Model.DynamicRuleRequest;
+import com.project.Bank_star.Model.DynamicRuleResponse;
+import com.project.Bank_star.Model.RuleQuery;
+import org.springframework.stereotype.Component;
+
+import java.util.stream.Collectors;
+
+@Component
+public class DynamicRuleConverter {
+
+    public DynamicRuleEntity toEntity(DynamicRuleRequest request) {
+        DynamicRuleEntity entity = new DynamicRuleEntity();
+        entity.setProductName(request.getProductName());
+        entity.setProductId(request.getProductId());
+        entity.setProductText(request.getProductText());
+
+        if (request.getRule() != null) {
+            entity.setRule(request.getRule().stream().map(this::toRuleQueryEntity).collect(Collectors.toList()));
+        }
+
+        return entity;
+    }
+
+    public DynamicRuleResponse toResponse(DynamicRuleEntity entity) {
+        DynamicRuleResponse response = new DynamicRuleResponse();
+        response.setId(entity.getId());
+        response.setProductName(entity.getProductName());
+        response.setProductId(entity.getProductId());
+        response.setProductText(entity.getProductText());
+
+        if (entity.getRule() != null) {
+            response.setRule(entity.getRule().stream().map(this::toRuleQueryModel).collect(Collectors.toList()));
+        }
+
+        return response;
+    }
+
+    private RuleQueryEntity toRuleQueryEntity(RuleQuery model) {
+        RuleQueryEntity entity = new RuleQueryEntity();
+        entity.setQuery(model.getQuery());
+        entity.setArguments(model.getArguments());
+        entity.setNegate(model.getNegate());
+        return entity;
+    }
+
+    private RuleQuery toRuleQueryModel(RuleQueryEntity entity) {
+        RuleQuery model = new RuleQuery();
+        model.setQuery(entity.getQuery());
+        model.setArguments(entity.getArguments());
+        model.setNegate(entity.getNegate());
+        return model;
+    }
+}

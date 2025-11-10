@@ -1,32 +1,24 @@
-package com.project.Bank_star.Entity;
+package com.project.Bank_star.Model;
 
-import jakarta.persistence.*;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@Entity
-@Table(name = "dynamic_rules")
-public class DynamicRuleEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class DynamicRuleResponse {
     private UUID id;
-
-    @Column(name = "product_name", nullable = false)
     private String productName;
-
-    @Column(name = "product_id", nullable = false)
     private UUID productId;
-
-    @Column(name = "product_text", nullable = false, length = 2000)
     private String productText;
+    private List<RuleQuery> rule;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
-    @JoinColumn(name = "dynamic_rule_id")
-    private List<RuleQueryEntity> rule = new ArrayList<>();
+    public DynamicRuleResponse() {
+    }
 
-    public DynamicRuleEntity() {
+    public DynamicRuleResponse(UUID id, String productName, UUID productId, String productText, List<RuleQuery> rule) {
+        this.id = id;
+        this.productName = productName;
+        this.productId = productId;
+        this.productText = productText;
+        this.rule = rule;
     }
 
     public UUID getId() {
@@ -61,11 +53,11 @@ public class DynamicRuleEntity {
         this.productText = productText;
     }
 
-    public List<RuleQueryEntity> getRule() {
+    public List<RuleQuery> getRule() {
         return rule;
     }
 
-    public void setRule(List<RuleQueryEntity> rule) {
+    public void setRule(List<RuleQuery> rule) {
         this.rule = rule;
     }
 }
