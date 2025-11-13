@@ -43,7 +43,7 @@ class RecommendationControllerTest {
 
         RecommendationResponse response = new RecommendationResponse(userId, List.of(recommendation));
 
-        when(recommendationService.getRecommendations(any(UUID.class), any(UserFinancial.class)))
+        when(recommendationService.getRecommendations(any(UUID.class)))
                 .thenReturn(response);
 
         // Act & Assert

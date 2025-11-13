@@ -15,6 +15,7 @@ import java.util.UUID;
 public class RecommendationController {
 
     private static final Logger log = LoggerFactory.getLogger(RecommendationController.class);
+
     private final RecommendationService recommendationService;
 
     public RecommendationController(RecommendationService recommendationService) {

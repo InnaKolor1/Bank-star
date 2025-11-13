@@ -50,7 +50,7 @@ class RecommendationServiceTest {
         RecommendationService service = new RecommendationService(repository, List.of(ruleSet1, ruleSet2));
 
 
-        RecommendationResponse response = service.getRecommendations(userId, metrics);
+        RecommendationResponse response = service.getRecommendations(userId);
 
 
         assertNotNull(response);
@@ -71,7 +71,7 @@ class RecommendationServiceTest {
         RecommendationService service = new RecommendationService(repository, List.of(ruleSet1, ruleSet2));
 
 
-        RecommendationResponse response = service.getRecommendations(userId, metrics);
+        RecommendationResponse response = service.getRecommendations(userId);
 
 
         assertNotNull(response);
