@@ -1,0 +1,39 @@
+package com.project.Bank_star.config;
+
+import com.project.Bank_star.Service.RecommendationService;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.telegram.telegrambots.meta.TelegramBotsApi;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
+import com.project.Bank_star.telegram.BankRecommendationBot;
+
+@Configuration
+public class TelegramBotConfig {
+
+    @Value("${telegram.bot.token}")
+    private String botToken;
+
+    @Value("${telegram.bot.name}")
+    private String botName;
+    private RecommendationService RecommendationService;
+
+    @Bean
+    public TelegramBotsApi telegramBotsApi(BankRecommendationBot bot) {
+        try {
+            TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
+            botsApi.registerBot(bot);
+            return botsApi;
+        } catch (TelegramApiException e) {
+            throw new RuntimeException("Failed to register Telegram bot", e);
+        }
+    }
+
+    @Bean
+    public BankRecommendationBot bankRecommendationBot(com.project.Bank_star.Service.RecommendationService recommendationService,
+                                                       @Qualifier("primaryJdbcTemplate") org.springframework.jdbc.core.JdbcTemplate jdbcTemplate) {
+        return new BankRecommendationBot(botToken, botName, recommendationService, jdbcTemplate);
+    }
+}
