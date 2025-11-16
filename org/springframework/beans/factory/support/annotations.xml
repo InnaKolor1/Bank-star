@@ -1,0 +1,11 @@
+<root>
+    <item name='org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory java.lang.Object doCreateBean(java.lang.String, org.springframework.beans.factory.support.RootBeanDefinition, java.lang.Object[])'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+    <item name='org.springframework.beans.factory.support.AbstractBeanFactory T getBean(java.lang.String, java.lang.Class&lt;T&gt;, java.lang.Object...)'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+    <item name='org.springframework.beans.factory.support.DefaultSingletonBeanRegistry java.lang.Object getSingleton(java.lang.String, org.springframework.beans.factory.ObjectFactory&lt;?&gt;)'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
