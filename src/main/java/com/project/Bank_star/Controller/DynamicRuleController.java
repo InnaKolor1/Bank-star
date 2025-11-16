@@ -47,3 +47,4 @@ public class DynamicRuleController {
             return ResponseEntity.ok(response);
         }
     }
+

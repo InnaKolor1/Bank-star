@@ -39,3 +39,4 @@ public class DynamicRuleEntity {
         return new byte[0];
     }
 }
+

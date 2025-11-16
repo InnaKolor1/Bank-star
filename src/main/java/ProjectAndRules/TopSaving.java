@@ -30,3 +30,4 @@ public class TopSaving implements RecommendationRuleSet {
         return Optional.empty();
     }
 }
+

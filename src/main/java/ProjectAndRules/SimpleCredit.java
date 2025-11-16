@@ -43,3 +43,4 @@ public class SimpleCredit implements RecommendationRuleSet {
         return Optional.empty();
         }
 }
+

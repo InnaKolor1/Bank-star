@@ -29,3 +29,4 @@ public interface RecommendationRepository extends JpaRepository<DynamicRuleEntit
     boolean isUserOfProductType(@Param("userId") UUID userId, @Param("productType") String productType);
 }
 
+

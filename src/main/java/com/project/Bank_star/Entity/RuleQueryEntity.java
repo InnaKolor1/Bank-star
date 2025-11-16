@@ -33,3 +33,4 @@ public class RuleQueryEntity {
     private UUID dynamicRuleId;
  }
 
+

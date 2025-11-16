@@ -13,3 +13,4 @@ import java.util.List;
 public class RuleStatisticsListResponse {
     private List<RuleStatisticResponse> stats;
 }
+

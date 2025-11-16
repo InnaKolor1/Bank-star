@@ -10,3 +10,4 @@ public interface RecommendationRuleSet {
 
     Optional<Recommendation001> applyRuleSet(UUID userId, UserFinancial metrics);
 }
+
