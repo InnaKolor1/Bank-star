@@ -1,8 +1,0 @@
-<root>
-    <item name='org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy'>
-        <annotation name='java.lang.Deprecated'/>
-    </item>
-    <item name='org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy.AbstractQueryLookupStrategy org.springframework.data.repository.query.RepositoryQuery resolveQuery(org.springframework.data.jpa.repository.query.JpaQueryMethod, org.springframework.data.jpa.repository.QueryRewriter, jakarta.persistence.EntityManager, org.springframework.data.repository.core.NamedQueries)'>
-        <annotation name='java.lang.Deprecated'/>
-    </item>
-</root>

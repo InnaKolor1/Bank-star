@@ -20,3 +20,4 @@ public class DynamicRule {
     private String productText;
     private String ruleJson;
 }
+

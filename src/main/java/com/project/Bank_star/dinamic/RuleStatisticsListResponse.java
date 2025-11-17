@@ -14,3 +14,4 @@ public class RuleStatisticsListResponse {
     private List<RuleStatisticResponse> stats;
 }
 
+

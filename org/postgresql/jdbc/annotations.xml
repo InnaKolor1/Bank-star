@@ -1,5 +1,0 @@
-<root>
-    <item name='org.postgresql.jdbc.PgConnection PgConnection(org.postgresql.util.HostSpec[], java.util.Properties, java.lang.String)'>
-        <annotation name='java.lang.Deprecated'/>
-    </item>
-</root>

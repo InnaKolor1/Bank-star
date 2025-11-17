@@ -16,3 +16,4 @@ public class RuleStatistics {
     private UUID ruleId;
     private Long triggerCount;
 }
+

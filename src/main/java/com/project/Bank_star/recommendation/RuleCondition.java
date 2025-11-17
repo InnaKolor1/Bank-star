@@ -15,3 +15,5 @@ public class RuleCondition {
     private List<String> arguments;
     private boolean negate;
 }
+
+

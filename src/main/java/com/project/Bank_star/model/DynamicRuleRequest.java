@@ -15,3 +15,4 @@ public class DynamicRuleRequest {
     private List<RuleQuery> rule;
 
 }
+

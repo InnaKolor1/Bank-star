@@ -10,7 +10,7 @@ import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Invest500Tests {
+class Invest500Test {
 
     private final Invest500 invest500 = new Invest500();
 

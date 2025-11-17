@@ -20,3 +20,5 @@ public class ServiceInfoContributor implements InfoContributor {
         builder.withDetail("service", serviceInfo);
     }
 }
+
+
