@@ -1,79 +1,47 @@
 package com.project.Bank_star.Entity;
 
 import jakarta.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+
+
+
 import java.util.UUID;
 
 @Entity
 @Table(name = "dynamic_rules")
+
+
 public class DynamicRuleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
+    @Column(name = "id", nullable = false, updatable = false)
     private UUID id;
 
-    @Column(name = "product_name", nullable = false)
-    private String productName;
-
-    @Column(name = "product_id", nullable = false)
+    @Column(name = "product_id", nullable = false, updatable = false)
     private UUID productId;
 
-    @Column(name = "product_text", nullable = false, length = 2000)
+    @Column(name = "name", nullable = false)
+    private String productName;
+
+    @Column(name = "text", nullable = false)
     private String productText;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
-    @JoinColumn(name = "dynamic_rule_id")
-    private List<RuleQueryEntity> rule = new ArrayList<>();
+    public DynamicRuleEntity() {}
 
-    public DynamicRuleEntity() {
-    }
 
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
+    public DynamicRuleEntity(UUID id, UUID productId, String productName, String productText) {
         this.id = id;
-    }
-
-
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public void setProductId(UUID productId) {
         this.productId = productId;
-    }
-
-
-
-    public void setProductText(String productText) {
+        this.productName = productName;
         this.productText = productText;
     }
 
-    public List<RuleQueryEntity> getRule() {
-        return rule;
-    }
+    public UUID getId() { return id; }
+    public UUID getProductId() { return productId; }
+    public String getProductName() { return productName; }
+    public String getProductText() { return productText; }
 
-    public void setRule(List<RuleQueryEntity> rule) {
-        this.rule = rule;
-    }
-
-    public byte[] getRuleJson() {
-        return new byte[0];
-    }
-
-    public String getProductName() {
-        return "";
-    }
-
-    public UUID getProductId() {
-        return null;
-    }
-
-    public String getProductText() {
-        return "";
-    }
+    public void setId(UUID id) { this.id = id; }
+    public void setProductId(UUID productId) { this.productId = productId; }
+    public void setProductName(String productName) { this.productName = productName; }
+    public void setProductText(String productText) { this.productText = productText; }
 }

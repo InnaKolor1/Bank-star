@@ -15,6 +15,7 @@ import java.util.UUID;
 public class RecommendationController {
 
     private static final Logger log = LoggerFactory.getLogger(RecommendationController.class);
+
     private final RecommendationService recommendationService;
 
     public RecommendationController(RecommendationService recommendationService) {
@@ -27,7 +28,7 @@ public class RecommendationController {
             @RequestBody UserFinancial userFinancial) {
 
         log.info("Received recommendation request for user: {}", userId);
-        RecommendationResponse response = recommendationService.getRecommendations(userId);
+        RecommendationResponse response = recommendationService.getRecommendations(userId, userFinancial);
         return ResponseEntity.ok(response);
     }
 

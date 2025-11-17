@@ -15,7 +15,7 @@ import java.util.UUID;
 
 @Component
 public class Invest500 implements RecommendationRuleSet {
-    public static final Logger log = LoggerFactory.getLogger(Invest500.class);
+    private static final Logger log = LoggerFactory.getLogger(Invest500.class);
 
     private static final UUID PRODUCT_ID = UUID.fromString("147f6a0f-3b91-413b-ab99-87f081d60d5a");
     private static final String NAME = "Invest 500";
