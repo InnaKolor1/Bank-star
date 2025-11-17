@@ -1,17 +1,14 @@
 package ProjectAndRules;
-import com.project.Bank_star.Recommendation.Recommendation001;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-import org.slf4j.Logger;
 
 import java.util.Optional;
-import java.util.OptionalLong;
 import java.util.UUID;
-
+import java.util.logging.Logger;
 
 @Component
 public class Invest500  {
-    private static final Logger log= LoggerFactory.getLogger(Invest500.class);
+    private static final Logger log= LoggerFactory.getLogger(SimpleCredit.class);
 
     private static final UUID Product_id=UUID.fromString("147f6a0f-3b91-413b-ab99-87f081d60d5a");
     private static final String name="Invest 500";
@@ -21,8 +18,7 @@ public class Invest500  {
             "Не упустите возможность разнообразить свой портфель, снизить риски и следить за актуальными рыночными тенденциями. " +                          "Откройте ИИС сегодня и станьте ближе к финансовой независимости!";
 
 
-@Override
-    Optional<Recommendation001>
+
 
 
 }
