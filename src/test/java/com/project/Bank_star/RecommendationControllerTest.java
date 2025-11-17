@@ -1,10 +1,10 @@
 package com.project.Bank_star;
 
-import com.project.Bank_star.Controller.RecommendationController;
-import com.project.Bank_star.Model.UserFinancial;
-import com.project.Bank_star.Recommendation.Recommendation001;
-import com.project.Bank_star.Recommendation.RecommendationResponse;
-import com.project.Bank_star.Service.RecommendationService;
+import com.project.Bank_star.controller.RecommendationController;
+import com.project.Bank_star.model.UserFinancial;
+import com.project.Bank_star.recommendation.Recommendation001;
+import com.project.Bank_star.recommendation.RecommendationResponse;
+import com.project.Bank_star.service.RecommendationService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;

@@ -1,11 +1,11 @@
 package com.project.Bank_star;
 
-import com.project.Bank_star.Model.UserFinancial;
-import com.project.Bank_star.Recommendation.Recommendation001;
-import com.project.Bank_star.Recommendation.RecommendationResponse;
-import com.project.Bank_star.Repository.RecommendationRepository;
-import com.project.Bank_star.Service.RecommendationRuleSet;
-import com.project.Bank_star.Service.RecommendationService;
+import com.project.Bank_star.model.UserFinancial;
+import com.project.Bank_star.recommendation.Recommendation001;
+import com.project.Bank_star.recommendation.RecommendationResponse;
+import com.project.Bank_star.repository.RecommendationRepository;
+import com.project.Bank_star.service.RecommendationRuleSet;
+import com.project.Bank_star.service.RecommendationService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

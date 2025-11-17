@@ -1,4 +1,4 @@
-package com.project.Bank_star.dinamic;
+package com.project.Bank_star.recommendation;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
