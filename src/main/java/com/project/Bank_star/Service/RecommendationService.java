@@ -1,15 +1,12 @@
 package com.project.Bank_star.Service;
 
 import com.project.Bank_star.Entity.RecommendationRule;
-import com.project.Bank_star.Recommendation.RecommendationResponse;
 import com.project.Bank_star.Repository.RecommendationRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.slf4j.MDC;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class RecommendationService {
@@ -21,5 +18,4 @@ public class RecommendationService {
         this.repository = repository;
         this.ruleSets = ruleSets;
     }
-
 }
