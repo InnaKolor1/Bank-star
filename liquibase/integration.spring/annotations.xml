@@ -1,5 +1,0 @@
-<root>
-    <item name='liquibase.integration.spring.SpringLiquibase'>
-        <annotation name='java.lang.Deprecated'/>
-    </item>
-</root>
