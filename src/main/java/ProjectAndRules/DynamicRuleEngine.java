@@ -3,15 +3,15 @@ package ProjectAndRules;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.project.Bank_star.entity.QueryType;
+import com.project.Bank_star.model.UserFinancial;
+import com.project.Bank_star.repository.RecommendationRepository;
 import lombok.Getter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import com.project.Bank_star.dinamic.RuleCondition;
-import com.project.Bank_star.Model.UserFinancial;
 import com.project.Bank_star.dinamic.DynamicRule;
-import com.project.Bank_star.Entity.QueryType;
-import com.project.Bank_star.Repository.RecommendationRepository;
 
 import java.util.List;
 import java.util.UUID;
@@ -30,7 +30,7 @@ public class DynamicRuleEngine {
 
     public boolean evaluateRule(DynamicRule rule, UUID userId, UserFinancial metrics) {
         try {
-            List<RuleCondition> conditions = objectMapper.readValue(
+            @SuppressWarnings("deprecation") List<RuleCondition> conditions = objectMapper.readValue(
                     rule.getRuleJson(),
                     objectMapper.getTypeFactory().constructCollectionType(List.class, RuleCondition.class)
             );
@@ -59,40 +59,37 @@ public class DynamicRuleEngine {
 
     private boolean evaluateCondition(RuleCondition condition, UUID userId, UserFinancial metrics) {
         QueryType queryType = condition.getQuery();
-        List<String> arguments = condition.getArguments();
+        @SuppressWarnings("deprecation") List<String> arguments = condition.getArguments();
 
-        switch (queryType) {
-            case USER_OF:
-                return arguments.size() >= 1 &&
-                        recommendationRepository.isUserOfProductType(userId, arguments.get(0));
-
-            case ACTIVE_USER_OF:
-                return arguments.size() >= 1 &&
-                        recommendationRepository.isActiveUserOfProductType(userId, arguments.get(0));
-
-            case TRANSACTION_SUM_COMPARE:
+        return switch (queryType) {
+            case USER_OF -> arguments.size() >= 1 &&
+                    recommendationRepository.isUserOfProductType(userId, arguments.get(0));
+            case ACTIVE_USER_OF -> arguments.size() >= 1 &&
+                    recommendationRepository.isActiveUserOfProductType(userId, arguments.get(0));
+            case TRANSACTION_SUM_COMPARE -> {
                 if (arguments.size() >= 3) {
                     Double actualSum = recommendationRepository.getTransactionSum(
                             userId, arguments.get(0), arguments.get(1));
                     Double expectedSum = Double.parseDouble(arguments.get(2));
-                    return actualSum >= expectedSum;
+                    yield actualSum >= expectedSum;
                 }
-                return false;
-
-            case TRANSACTION_SUM_COMPARE_DEPOSIT_WITHDRAW:
+                yield false;
+            }
+            case TRANSACTION_SUM_COMPARE_DEPOSIT_WITHDRAW -> {
                 if (arguments.size() >= 2) {
                     Double depositSum = recommendationRepository.getTransactionSum(
                             userId, arguments.get(0), "DEPOSIT");
                     Double withdrawSum = recommendationRepository.getTransactionSum(
                             userId, arguments.get(0), "WITHDRAW");
                     Double expectedRatio = Double.parseDouble(arguments.get(1));
-                    return depositSum > withdrawSum * expectedRatio;
+                    yield depositSum > withdrawSum * expectedRatio;
                 }
-                return false;
-
-            default:
+                yield false;
+            }
+            default -> {
                 log.warn("Unknown query type: {}", queryType);
-                return false;
-        }
+                yield false;
+            }
+        };
     }
 }
