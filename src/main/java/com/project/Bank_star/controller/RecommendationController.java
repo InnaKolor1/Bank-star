@@ -36,3 +36,4 @@ public class RecommendationController {
         return ResponseEntity.ok("Recommendation service is running");
     }
 }
+

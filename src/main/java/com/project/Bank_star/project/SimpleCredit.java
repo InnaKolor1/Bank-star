@@ -44,3 +44,4 @@ public class SimpleCredit implements RecommendationRuleSet {
         }
 }
 
+

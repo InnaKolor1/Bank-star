@@ -33,3 +33,4 @@ public class UserFinancial {
     private double sumDebitDeposits;
 
 }
+

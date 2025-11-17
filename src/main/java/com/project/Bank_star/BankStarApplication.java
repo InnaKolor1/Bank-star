@@ -12,3 +12,4 @@ public class BankStarApplication {
         run(BankStarApplication.class, args);
     }
 }
+

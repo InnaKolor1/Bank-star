@@ -23,3 +23,4 @@ public interface DynamicRuleRepository extends JpaRepository<DynamicRuleEntity, 
     @Transactional
     void deleteByProductId(UUID productId);
 }
+

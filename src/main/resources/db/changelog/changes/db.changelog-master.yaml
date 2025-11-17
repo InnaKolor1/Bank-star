@@ -5,3 +5,4 @@ databaseChangeLog:
       file: db/changelog/changes/002-insert-test-data.yaml
   - include:
       file: db/changelog/changes/003-add-recommendation-rules.yaml
+

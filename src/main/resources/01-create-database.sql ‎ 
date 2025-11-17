@@ -38,3 +38,4 @@ GRANT USAGE ON SCHEMA bank_star_schema TO "transaction.mv.db";
 GRANT CREATE ON SCHEMA bank_star_schema TO "transaction.mv.db";
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA bank_star_schema TO "transaction.mv.db";
 GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA bank_star_schema TO "transaction.mv.db";
+

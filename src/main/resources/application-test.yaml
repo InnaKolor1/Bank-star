@@ -20,3 +20,4 @@ spring:
 logging:
   level:
     com.project.Bank_star: DEBUG
+

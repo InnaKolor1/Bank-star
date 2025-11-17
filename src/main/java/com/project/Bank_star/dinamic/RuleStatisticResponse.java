@@ -13,3 +13,4 @@ public class RuleStatisticResponse {
     private UUID ruleId;
     private Long count;
 }
+

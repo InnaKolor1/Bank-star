@@ -6,3 +6,4 @@ CREATE DATABASE bank_star.app
 
 
 CREATE SCHEMA IF NOT EXISTS bank;
+

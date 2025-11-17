@@ -72,3 +72,4 @@ class RecommendationControllerTest {
                 .andExpect(content().string("Recommendation service is running"));
     }
 }
+

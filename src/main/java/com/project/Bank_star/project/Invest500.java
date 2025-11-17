@@ -44,3 +44,4 @@ public class Invest500 implements RecommendationRuleSet {
     }
 }
 
+

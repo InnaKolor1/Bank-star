@@ -1,5 +1,0 @@
-<root>
-    <item name='org.springframework.data.repository.query.parser.Part Part(java.lang.String, java.lang.Class&lt;?&gt;, boolean)'>
-        <annotation name='java.lang.Deprecated'/>
-    </item>
-</root>
