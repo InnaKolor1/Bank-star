@@ -1,6 +1,6 @@
-package com.project.Bank_star.Repository;
+package com.project.Bank_star.repository;
 
-import com.project.Bank_star.Entity.RuleQueryEntity;
+import com.project.Bank_star.entity.RuleQueryEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

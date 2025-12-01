@@ -1,4 +1,4 @@
-package com.project.Bank_star.Service;
+package com.project.Bank_star.service;
 
 import org.springframework.stereotype.Repository;
 

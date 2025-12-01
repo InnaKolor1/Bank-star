@@ -1,7 +1,7 @@
-package com.project.Bank_star.Service;
+package com.project.Bank_star.service;
 
-import com.project.Bank_star.Entity.QueryType;
-import com.project.Bank_star.Entity.RuleQueryEntity;
+import com.project.Bank_star.entity.QueryType;
+import com.project.Bank_star.entity.RuleQueryEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

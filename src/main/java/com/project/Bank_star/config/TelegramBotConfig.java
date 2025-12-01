@@ -1,6 +1,6 @@
 package com.project.Bank_star.config;
 
-import com.project.Bank_star.Service.RecommendationService;
+import com.project.Bank_star.service.RecommendationService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -32,7 +32,7 @@ public class TelegramBotConfig {
     }
 
     @Bean
-    public BankRecommendationBot bankRecommendationBot(com.project.Bank_star.Service.RecommendationService recommendationService,
+    public BankRecommendationBot bankRecommendationBot(com.project.Bank_star.service.RecommendationService recommendationService,
                                                        @Qualifier("primaryJdbcTemplate") org.springframework.jdbc.core.JdbcTemplate jdbcTemplate) {
         return new BankRecommendationBot(botToken, botName, recommendationService, jdbcTemplate);
     }

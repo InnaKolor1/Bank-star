@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 import com.project.Bank_star.dinamic.RuleCondition;
 import com.project.Bank_star.Model.UserFinancial;
 import com.project.Bank_star.dinamic.DynamicRule;
-import com.project.Bank_star.Entity.QueryType;
-import com.project.Bank_star.Repository.RecommendationRepository;
+import com.project.Bank_star.entity.QueryType;
+import com.project.Bank_star.repository.RecommendationRepository;
 
 import java.util.List;
 import java.util.UUID;

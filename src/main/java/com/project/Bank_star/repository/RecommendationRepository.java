@@ -1,6 +1,6 @@
-package com.project.Bank_star.Repository;
+package com.project.Bank_star.repository;
 
-import com.project.Bank_star.Entity.DynamicRuleEntity;
+import com.project.Bank_star.entity.DynamicRuleEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.UUID;

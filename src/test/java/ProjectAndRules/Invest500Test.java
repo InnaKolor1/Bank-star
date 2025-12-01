@@ -1,7 +1,7 @@
 package ProjectAndRules;
 
 import com.project.Bank_star.Model.UserFinancial;
-import com.project.Bank_star.Recommendation.Recommendation001;
+import com.project.Bank_star.recommendation.Recommendation001;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;

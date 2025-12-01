@@ -1,7 +1,7 @@
-package com.project.Bank_star.Service;
+package com.project.Bank_star.service;
 
 import com.project.Bank_star.Model.UserFinancial;
-import com.project.Bank_star.Recommendation.Recommendation001;
+import com.project.Bank_star.recommendation.Recommendation001;
 
 import java.util.Optional;
 import java.util.UUID;

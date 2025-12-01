@@ -1,11 +1,11 @@
-package com.project.Bank_star.Service;
+package com.project.Bank_star.service;
 
-import com.project.Bank_star.Entity.DynamicRuleEntity;
-import com.project.Bank_star.Entity.RuleQueryEntity;
+import com.project.Bank_star.entity.DynamicRuleEntity;
+import com.project.Bank_star.entity.RuleQueryEntity;
 import com.project.Bank_star.Model.UserFinancial;
-import com.project.Bank_star.Recommendation.Recommendation001;
-import com.project.Bank_star.Recommendation.RecommendationResponse;
-import com.project.Bank_star.Repository.RecommendationRepository;
+import com.project.Bank_star.recommendation.Recommendation001;
+import com.project.Bank_star.recommendation.RecommendationResponse;
+import com.project.Bank_star.repository.RecommendationRepository;
 
 
 import org.springframework.stereotype.Service;

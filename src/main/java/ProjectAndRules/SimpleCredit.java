@@ -1,8 +1,8 @@
 package ProjectAndRules;
 
 import com.project.Bank_star.Model.UserFinancial;
-import com.project.Bank_star.Recommendation.Recommendation001;
-import com.project.Bank_star.Service.RecommendationRuleSet;
+import com.project.Bank_star.recommendation.Recommendation001;
+import com.project.Bank_star.service.RecommendationRuleSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

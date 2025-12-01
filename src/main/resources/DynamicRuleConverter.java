@@ -1,9 +1,8 @@
-package com.project.Bank_star.Service;
+package com.project.Bank_star.service;
 
-import com.project.Bank_star.Entity.DynamicRuleEntity;
-import com.project.Bank_star.Entity.RuleQueryEntity;
+import com.project.Bank_star.entity.DynamicRuleEntity;
+import com.project.Bank_star.entity.RuleQueryEntity;
 import com.project.Bank_star.Model.DynamicRuleRequest;
-import com.project.Bank_star.Model.DynamicRuleResponse;
 import com.project.Bank_star.Model.RuleQuery;
 import org.springframework.stereotype.Component;
 

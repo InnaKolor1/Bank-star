@@ -1,8 +1,8 @@
-package com.project.Bank_star.Controller;
+package com.project.Bank_star.controller;
 
 import com.project.Bank_star.Model.UserFinancial;
-import com.project.Bank_star.Recommendation.RecommendationResponse;
-import com.project.Bank_star.Service.RecommendationService;
+import com.project.Bank_star.recommendation.RecommendationResponse;
+import com.project.Bank_star.service.RecommendationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;

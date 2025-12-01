@@ -1,9 +1,9 @@
-package com.project.Bank_star.Recommendation;
+package com.project.Bank_star.recommendation;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.project.Bank_star.Entity.QueryType;
+import com.project.Bank_star.entity.QueryType;
 
 import java.util.List;
 

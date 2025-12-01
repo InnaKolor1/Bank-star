@@ -9,9 +9,9 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import com.project.Bank_star.Recommendation.Recommendation001;
-import com.project.Bank_star.Recommendation.RecommendationResponse;
-import com.project.Bank_star.Service.RecommendationService;
+import com.project.Bank_star.recommendation.Recommendation001;
+import com.project.Bank_star.recommendation.RecommendationResponse;
+import com.project.Bank_star.service.RecommendationService;
 
 import java.util.List;
 import java.util.UUID;

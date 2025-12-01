@@ -1,8 +1,8 @@
-package com.project.Bank_star.Controller;
+package com.project.Bank_star.controller;
 
 import com.project.Bank_star.Model.DynamicRuleRequest;
 import com.project.Bank_star.Model.DynamicRuleResponse;
-import com.project.Bank_star.Service.DynamicRuleService;
+import com.project.Bank_star.service.DynamicRuleService;
 import com.project.Bank_star.dinamic.RuleStatisticsListResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -38,10 +38,10 @@ public class DynamicRuleController {
         boolean deleted = dynamicRuleService.deleteRuleByProductId(productId);
         return deleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
     }
-        @GetMapping("/stats")
-        public ResponseEntity<RuleStatisticsListResponse> getRuleStatistics() {
-            log.debug("GET /rule/stats - Retrieving rule statistics");
-            RuleStatisticsListResponse response = dynamicRuleService.getRuleStatistics();
-            return ResponseEntity.ok(response);
-        }
+    @GetMapping("/stats")
+    public ResponseEntity<RuleStatisticsListResponse> getRuleStatistics() {
+        log.debug("GET /rule/stats - Retrieving rule statistics");
+        RuleStatisticsListResponse response = dynamicRuleService.getRuleStatistics();
+        return ResponseEntity.ok(response);
     }
+}

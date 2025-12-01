@@ -1,4 +1,4 @@
-package com.project.Bank_star.Recommendation;
+package com.project.Bank_star.recommendation;
 
 import java.util.List;
 import java.util.UUID;

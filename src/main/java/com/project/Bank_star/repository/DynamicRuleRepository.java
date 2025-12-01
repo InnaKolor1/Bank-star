@@ -1,6 +1,6 @@
-package com.project.Bank_star.Repository;
+package com.project.Bank_star.repository;
 
-import com.project.Bank_star.Entity.DynamicRuleEntity;
+import com.project.Bank_star.entity.DynamicRuleEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

@@ -1,4 +1,4 @@
-package com.project.Bank_star.Entity;
+package com.project.Bank_star.entity;
 
 import jakarta.persistence.*;
 import java.util.UUID;

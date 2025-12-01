@@ -1,4 +1,4 @@
-package com.project.Bank_star.Repository;
+package com.project.Bank_star.repository;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

@@ -1,4 +1,4 @@
-package com.project.Bank_star.Controller;
+package com.project.Bank_star.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
